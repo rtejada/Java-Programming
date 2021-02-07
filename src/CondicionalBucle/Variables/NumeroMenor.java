@@ -1,4 +1,4 @@
-package Variables;
+package CondicionalBucle.Variables;
 
 import java.util.Scanner;
 

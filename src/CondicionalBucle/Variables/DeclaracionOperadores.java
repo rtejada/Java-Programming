@@ -1,4 +1,4 @@
-package Variables;
+package CondicionalBucle.Variables;
 
 
 public class DeclaracionOperadores {
