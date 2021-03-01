@@ -1,4 +1,4 @@
-package Rectangle_POO;
+package poo.rectangle;
 
 public class RoomAreaCalculator {
 

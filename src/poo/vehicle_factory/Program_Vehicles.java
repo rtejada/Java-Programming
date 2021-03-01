@@ -1,4 +1,4 @@
-package vehicle_factory;
+package poo.vehicle_factory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ public class Program_Vehicles {
 
         list.add(new Auto("BMW", 100, 8, "MX25"));
         list.add(new Auto("Dacia", 90, 7, "M445"));
-        list.add(new Bycicle("Bicicleta Deportiva", 30, 2));
-        list.add(new Bycicle("Bicicleta de Montaña", 30, 2));
+        list.add(new Bicycle("Bicicleta Deportiva", 30, 2));
+        list.add(new Bicycle("Bicicleta de Montaña", 30, 2));
 
         for (int i=0; i<list.size(); i++){
 

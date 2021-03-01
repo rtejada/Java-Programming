@@ -1,4 +1,4 @@
-package vehicle_factory;
+package poo.vehicle_factory;
 
 public class Auto extends Vehicles {
 

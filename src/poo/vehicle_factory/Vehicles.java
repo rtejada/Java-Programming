@@ -1,4 +1,4 @@
-package vehicle_factory;
+package poo.vehicle_factory;
 
 public abstract class Vehicles {
     protected String description;
