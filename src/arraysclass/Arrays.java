@@ -16,6 +16,20 @@ public class Arrays {
             multiplo += 5;
         }
 
+        System.out.println("*******************************");
+
+        int[] array = new int[5];
+
+        for (int i=0; i<array.length; i+=2){
+            array[i] = i-1;
+        }
+
+
+        for (int i=0; i<array.length; i++){
+            System.out.println(array[i]);
+
+        }
+
 
 
 

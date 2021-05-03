@@ -23,33 +23,8 @@ public class Car {
     }
 
     public String tellMeGeneralData(){
-        return "The car's platform have " + wheels + " wheels, measures " + length/1000 + " meters wide "
-                + width + "cm, and a platform weight the " + platformWeight + "kg";
-    }
-
-
-    public int getTotalWeight() {
-        return totalWeight;
-    }
-
-    public void setTotalWeight(int totalWeight) {
-        this.totalWeight = totalWeight;
-    }
-
-    public boolean isLeatherSeats() {
-        return leatherSeats;
-    }
-
-    public void setLeatherSeats(boolean leatherSeats) {
-        this.leatherSeats = leatherSeats;
-    }
-
-    public boolean isClimateControl() {
-        return climateControl;
-    }
-
-    public void setClimateControl(boolean climateControl) {
-        this.climateControl = climateControl;
+        return "The car's platform has got " + wheels + " wheels, it measures " + length/1000 + " meters wide "
+                + width + "cm, and the platform weights " + platformWeight + "kg";
     }
 
     public String getColor() {
@@ -60,45 +35,54 @@ public class Car {
         this.color = color;
     }
 
-    public int getWheels() {
-        return wheels;
+    public void configureSeats(String leatherSeat){
+        if (leatherSeat.equalsIgnoreCase("si")){
+            this.leatherSeats=true;
+        }else {
+            this.leatherSeats=false;
+        }
     }
 
-    public void setWheels(int wheels) {
-        this.wheels = wheels;
+    public String tellMeSeat(){
+        if (leatherSeats){
+            return "the car has got leather seat";
+        }else {
+            return "The car hasn't got leather seat";
+        }
     }
 
-    public int getLength() {
-        return length;
+    public void configureClimatic(String climate){
+
+        if (climate.equalsIgnoreCase("si")){
+            this.climateControl=true;
+        }else {
+            this.climateControl=false;
+        }
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public String tellMeClimate(){
+
+        if (climateControl){
+            return "The car has got air conditioner ";
+        }else {
+            return "the car hasn't got air conditioner ";
+        }
     }
 
-    public int getWidth() {
-        return width;
+    public String tellMeCarWeight(){
+
+        int weightBodywork = 500;
+        totalWeight = platformWeight + weightBodywork;
+
+        if (leatherSeats){
+            totalWeight += 50;
+        }
+        if (climateControl){
+            totalWeight+=20;
+        }
+        return "The car's weight is " + totalWeight;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getEngine() {
-        return engine;
-    }
-
-    public void setEngine(int engine) {
-        this.engine = engine;
-    }
-
-    public int getPlatformWeight() {
-        return platformWeight;
-    }
-
-    public void setPlatformWeight(int weight) {
-        this.platformWeight = weight;
-    }
 
 
 }
